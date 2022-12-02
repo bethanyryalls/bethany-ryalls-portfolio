@@ -1,0 +1,49 @@
+:root {
+    --light: #FFFAF4;
+    --dark: #242323;
+    --maincolor: purple;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.5;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+nav {
+    background-color: var(--dark);
+    position: fixed;
+    padding: 10px 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo img {
+    max-height: 50px;
+}
+
+
+nav ul li {
+    display: inline-block;
+    margin-left: 25px;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+}
+
+nav a {
+    color: var(--light);
+    text-decoration: none;
+}
