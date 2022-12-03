@@ -27,12 +27,16 @@ h1 {
     float: right;
 }
 
-/*
-.row {
-    display: flex;
-    align-items: center;
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    font-family: 'Roboto' , sans-serif;
+    letter-spacing: 0.3rem;
 }
-*/
+
+/* Navigation Styles */
 
 nav {
     background-color: var(--dark);
@@ -97,11 +101,11 @@ nav a {
 }
 
 #technologies {
-    grid-area: technologies
+    grid-area: technologies;
 }
 
 #title {
-    grid-area: title
+    grid-area: title;
 }
 
 #technologies ul {
@@ -118,6 +122,58 @@ nav a {
 
 #technologies ul li::before {
     content: "• ";
+}
+
+/* Portfolio Grid */
+
+#portfolio-grid {
+    margin: 30px;
+}
+
+#project-1 {
+    background-image: url('../images/code-refractor.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 1fr 0.4fr 40px;
+    grid-template-areas: ". ." "refracting ." ". .";
+}
+
+#refracting {
+    grid-area: refracting;
+}
+
+.project-info {
+    background-color: var(--dark);
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 80% 20%;
+    grid-template-rows: 1fr 0.3fr;
+    grid-template-areas: "projectText  ." ". projectLink";
+    align-items: end;
+    color: white;
+}
+
+#projectText {
+    grid-area: projectText;
+}
+
+#projectLink {
+    grid-area: projectLink;
+    text-align: right;
+}
+
+#projectLink::after {
+    content: " →";
+}
+
+#projectText h2 {
+    font-size: 2.2rem;
+    font-weight: 900;
+    margin-bottom: 0;
 }
 
 /* Media Queries */
