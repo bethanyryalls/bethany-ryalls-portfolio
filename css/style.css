@@ -4,13 +4,19 @@
     --maincolor: purple;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;900&display=swap');
+
 html {
     font-size: 62.5%;
 }
 
 body {
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Roboto', sans-serif;
     line-height: 1.5;
+}
+
+h1 {
+    font-size: 2.2rem;
 }
 
 .float-left {
@@ -47,6 +53,7 @@ nav ul li {
     margin-left: 25px;
     text-transform: uppercase;
     letter-spacing: 0.3rem;
+    font-weight: 500;
 }
 
 nav a {
@@ -56,26 +63,86 @@ nav a {
 
 /* About Section */
 
-#image img {
-    width: 100%;
+#about-section {
+    padding-top: 30px;
 }
 
-#about-section {
+/* #image img {
+    width: 100%;
+} */
+
+#about-info {
     padding: 20px;
     display: grid;
     grid-template-columns: 1fr 2fr 2fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: "image about technologies";
+    grid-template-rows: 50px 4fr;
+    grid-template-areas: "image title title" "image about technologies";
+    column-gap: 40px;
 }
 
 #image {
     grid-area: image;
+    background-image: url("../images/bethany-ryalls-avatar.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    position: relative;
 }
 
 #about {
     grid-area: about;
+    padding-right: 30px;
+    border-right: 1px solid var(--dark);
 }
 
 #technologies {
     grid-area: technologies
+}
+
+#title {
+    grid-area: title
+}
+
+#technologies ul {
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+
+}
+
+#technologies ul li {
+    font-size: 1.4rem;
+    letter-spacing: 0.05rem;
+}
+
+#technologies ul li::before {
+    content: "• ";
+}
+
+/* Media Queries */
+
+/* About Section */
+
+@media only screen and (max-width:900px) {
+    #about-section {
+        padding-top: 0;
+    }
+
+    #about-info {
+        padding: 20px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 3fr 25px 1.5fr 0.7fr;
+        grid-template-areas: "image" "title" "about" "technologies";
+        row-gap: 20px;
+        text-align: center;
+    }
+
+    #about {
+        padding: 0;
+        border-right: 0;
+        padding-bottom: 20px;
+        border-bottom: 1px solid var(--dark);
+    }
 }
