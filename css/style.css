@@ -21,14 +21,20 @@ body {
     float: right;
 }
 
+/*
+.row {
+    display: flex;
+    align-items: center;
+}
+*/
+
 nav {
     background-color: var(--dark);
-    position: fixed;
     padding: 10px 20px;
     width: 100%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
 }
 
 #logo img {
@@ -46,4 +52,30 @@ nav ul li {
 nav a {
     color: var(--light);
     text-decoration: none;
+}
+
+/* About Section */
+
+#image img {
+    width: 100%;
+}
+
+#about-section {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "image about technologies";
+}
+
+#image {
+    grid-area: image;
+}
+
+#about {
+    grid-area: about;
+}
+
+#technologies {
+    grid-area: technologies
 }
