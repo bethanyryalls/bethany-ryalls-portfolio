@@ -68,12 +68,17 @@ nav a {
 /* About Section */
 
 #about-section {
-    padding-top: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 /* #image img {
     width: 100%;
 } */
+
+#title h1 {
+    margin: 0;
+}
 
 #about-info {
     padding: 20px;
@@ -106,6 +111,8 @@ nav a {
 
 #title {
     grid-area: title;
+    display: flex;
+    align-items: center;
 }
 
 #technologies ul {
@@ -127,7 +134,25 @@ nav a {
 /* Portfolio Grid */
 
 #portfolio-grid {
-    margin: 30px;
+    background-color: var(--dark);
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "project-1 project-1" "project-2 project-3";
+    gap: 30px;
+}
+
+#project-1 {
+    grid-area: project-1
+}
+
+#project-2 {
+    grid-area: project-2
+}
+
+#project-3 {
+    grid-area: project-3
 }
 
 #project-1 {
@@ -140,6 +165,7 @@ nav a {
     grid-template-columns: 60% 40%;
     grid-template-rows: 1fr 0.4fr 40px;
     grid-template-areas: ". ." "refracting ." ". .";
+    box-shadow: 0px 10px 30px #000;
 }
 
 #refracting {
@@ -150,30 +176,65 @@ nav a {
     background-color: var(--dark);
     padding: 20px;
     display: grid;
-    grid-template-columns: 80% 20%;
+    grid-template-columns: 65% 35%;
     grid-template-rows: 1fr 0.3fr;
-    grid-template-areas: "projectText  ." ". projectLink";
+    grid-template-areas: "projectText  projectText" "projectLink projectLink";
     align-items: end;
     color: white;
 }
 
-#projectText {
+.projectText {
     grid-area: projectText;
 }
 
-#projectLink {
+.projectLink {
     grid-area: projectLink;
     text-align: right;
 }
 
-#projectLink::after {
+.projectLink::after {
     content: " →";
 }
 
-#projectText h2 {
+.projectText h2 {
     font-size: 2.2rem;
     font-weight: 900;
     margin-bottom: 0;
+}
+
+#project-2 {
+    background-image: url('../images/code-refractor.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    display: grid;
+    grid-template-columns: 75% 25%;
+    grid-template-rows: 1fr 0.4fr 40px;
+    grid-template-areas: ". ." "prework ." ". .";
+    box-shadow: 0px 10px 30px #000;
+}
+
+#prework {
+    grid-area: prework;
+}
+
+
+#project-3 {
+    background-image: url('../images/code-refractor.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    display: grid;
+    grid-template-columns: 75% 25%;
+    grid-template-rows: 1fr 0.4fr 40px;
+    grid-template-areas: ". ." "other ." ". .";
+    box-shadow: 0px 10px 30px #000;
+}
+
+#other {
+    grid-area: other;
 }
 
 /* Media Queries */
@@ -200,5 +261,9 @@ nav a {
         border-right: 0;
         padding-bottom: 20px;
         border-bottom: 1px solid var(--dark);
+    }
+
+    #title {
+        justify-content: center;
     }
 }
