@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;900&display=swap" rel="stylesheet">
     <link href="css/reset.css" rel="stylesheet" type="text/css">
     <link href="css/style.css" rel="stylesheet" type="text/css">
     <title>Bethany Ryalls | Portfolio</title>
@@ -16,13 +18,13 @@
         <div id="logo" class="float-left">
             <img src="./images/br-logo.png" alt="b and r in serif font displayed as a logo">
         </div>
-        <div id="links" class ="float-right">
+        <div id="links" class="float-right">
             <ul>
                 <li>
-                    <a href="#about">About</a>
+                    <a href="#about-section">About</a>
                 </li>
                 <li>
-                    <a href="#work">Work</a>
+                    <a href="#portfolio-grid">Work</a>
                 </li>
                 <li>
                     <a href="#contact">Contact</a>
@@ -41,10 +43,10 @@
                 <div id="about" class="about-items">
                     <h2>Front End Web Developer</h2>
                     <p>
-                        I am passionate about human-centered design, interaction and understanding people. 
-                        Something that really drives me is having empathy towards the challenges that people 
-                        are presented with, helping them find solutions through intuitive design and insightful 
-                        interaction. 
+                        I am passionate about human-centered design, interaction and understanding people.
+                        Something that really drives me is having empathy towards the challenges that people
+                        are presented with, helping them find solutions through intuitive design and insightful
+                        interaction.
                     </p>
                 </div>
                 <div id="technologies" class="about-items">
@@ -61,37 +63,44 @@
             </div>
         </section>
 
+        <!--Change link urls and add cursor pointer-->
+
         <section id="portfolio-grid">
-                <div id="project-1">
+            <div id="project-1" onclick='location.href="http://bethanyryalls.github.io/bootcamp-challenge-1"'>
                     <div id="refracting" class="project-info">
                         <div class="projectText">
                             <h3>Development</h3>
                             <h2>Refracting Code</h2>
                         </div>
-                        <a class="projectLink" href="google.com">View Website</a>
+                        <a class="projectLink" href="http://bethanyryalls.github.io/bootcamp-challenge-1">View
+                            Website</a>
                     </div>
-                </div>
-                <div id="project-2">
-                    <div id="prework" class="project-info">
-                        <div class="projectText">
-                            <h3>Development</h3>
-                            <h2>BootCamp Study Guide</h2>
-                        </div>
-                        <a class="projectLink" href="google.com">View Website</a>
+            </div>
+            <div id="project-2" onclick='location.href="http://bethanyryalls.github.io/prework-study-guide"'>
+                <div id="prework" class="project-info">
+                    <div class="projectText">
+                        <h3>Development</h3>
+                        <h2>BootCamp Study Guide</h2>
                     </div>
+                    <a class="projectLink" href="http://bethanyryalls.github.io/prework-study-guide">View Website</a>
                 </div>
-                <div id="project-3">
-                    <div id="other" class="project-info">
-                        <div class="projectText">
-                            <h3>Design</h3>
-                            <h2>Photography Portfolio</h2>
-                        </div>
-                        <a class="projectLink" href="google.com">View Website</a>
+            </div>
+            <div id="project-3" onclick='location.href="http://blancnoir.motifdesignstudio.com"'>
+                <div id="other" class="project-info">
+                    <div class="projectText">
+                        <h3>Design</h3>
+                        <h2>Website for Coaches</h2>
                     </div>
+                    <a class="projectLink" href="http://blancnoir.motifdesignstudio.com">View Website</a>
                 </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div id="contact-info"></div>
         </section>
     </main>
-    
+
 </body>
 
 </html>
