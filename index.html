@@ -15,11 +15,12 @@
 </head>
 
 <body>
+    <!--Naviagtion using flexbox-->
     <nav>
-        <div id="logo" class="float-left">
+        <div id="logo">
             <img src="./images/br-logo.png" alt="b and r in serif font displayed as a logo">
         </div>
-        <div id="links" class="float-right">
+        <div>
             <ul>
                 <li>
                     <a href="#about-section">About</a>
@@ -35,13 +36,14 @@
     </nav>
 
     <main>
+        <!--About Section using grid layout-->
         <section id="about-section">
             <div id="about-info">
-                <div id="image" class="about-items"></div>
-                <div id="title" class="about-items">
-                    <h1>Bethany Ryalls</h1>
-                </div>
-                <div id="about" class="about-items">
+                <!--Using 'image' div with background-image in css to display the image correctly within the grid layout. 
+                    Ensuring it is responsive-->
+                <div id="image"></div>
+                <h1>Bethany Ryalls</h1>
+                <div id="about">
                     <h2>Front End Web Developer</h2>
                     <p>
                         I am passionate about human-centered design, interaction and understanding people.
@@ -50,7 +52,7 @@
                         interaction.
                     </p>
                 </div>
-                <div id="technologies" class="about-items">
+                <div id="technologies">
                     <h3>A few technologies I work with:</h3>
                     <ul>
                         <li>HTML5</li>
@@ -64,18 +66,22 @@
             </div>
         </section>
 
-        <!--Change link urls and add cursor pointer-->
-
+        <!--Portfolio/Work Section using nested grid layouts-->
+        <!--portfolio containing all projects-->
         <section id="portfolio-grid">
+            <!--grid containing project one image and information-->
+            <!--Used 'onclick' function to link the container/image to deployed application. Using nested divs caused 
+                a problem when adding an a tag where the link would only be in the first cell of the nested grid. 
+                Overcame this issue by using 'onclick'.-->
             <div id="project-1" onclick='location.href="http://bethanyryalls.github.io/bootcamp-challenge-1"'>
-                    <div id="refracting" class="project-info">
-                        <div class="projectText">
-                            <h3>Development</h3>
-                            <h2>Refracting Code</h2>
-                        </div>
-                        <a class="projectLink" href="http://bethanyryalls.github.io/bootcamp-challenge-1">View
-                            Website</a>
+                <!--grid containing title and subtitle of project one-->
+                <div id="refracting" class="project-info">
+                    <div class="projectText">
+                        <h3>Development</h3>
+                        <h2>Refracting Code</h2>
                     </div>
+                    <a class="projectLink" href="http://bethanyryalls.github.io/bootcamp-challenge-1">View Website</a>
+                </div>
             </div>
             <div id="project-2" onclick='location.href="http://bethanyryalls.github.io/prework-study-guide"'>
                 <div id="prework" class="project-info">
@@ -97,9 +103,11 @@
             </div>
         </section>
 
+        <!--Contact Section using flexbox-->
         <section id="contact">
             <div id="contact-info">
                 <h2>Contact Me</h2>
+                <!--mailto: and tel: used so user can click to be directed to either email or call-->
                 <a href="mailto:bethany@motifdesignstudio.com">bethany@motifdesignstudio.com</a>
                 <a href="tel:07921583898">07921 583898</a>
             </div>

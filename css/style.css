@@ -4,8 +4,10 @@
     --maincolor: purple;
 }
 
+/* Importing Roboto font to be used sitewide */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;900&display=swap');
 
+/* setting 1rem to be 10px */
 html {
     font-size: 62.5%;
 }
@@ -17,14 +19,6 @@ body {
 
 h1 {
     font-size: 2.2rem;
-}
-
-.float-left {
-    float: left;
-}
-
-.float-right {
-    float: right;
 }
 
 a {
@@ -47,6 +41,7 @@ nav {
     justify-content: space-between;
 }
 
+/* adjusting nav logo to smaller height */
 #logo img {
     max-height: 50px;
 }
@@ -72,11 +67,8 @@ nav a {
     padding-bottom: 20px;
 }
 
-/* #image img {
-    width: 100%;
-} */
-
-#title h1 {
+/* centering h1 vertically for better spacing */
+#about-info h1 {
     margin: 0;
 }
 
@@ -109,7 +101,7 @@ nav a {
     grid-area: technologies;
 }
 
-#title {
+#about-info h1 {
     grid-area: title;
     display: flex;
     align-items: center;
@@ -158,6 +150,7 @@ nav a {
     cursor: pointer;
 }
 
+/* styling individual project grids */
 #project-1 {
     background-image: url('../images/code-refractor.jpg');
     background-position: center;
@@ -168,18 +161,73 @@ nav a {
     grid-template-columns: 60% 40%;
     grid-template-rows: 1fr 0.4fr 40px;
     grid-template-areas: ". ." "refracting ." ". .";
-    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.2);
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, .2);
     transition: 0.2s;
 }
 
 #project-1:hover {
-    box-shadow: inset 0 0 0 1000px rgba(0,0,0,0);
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0);
     transition: 0.2s;
 }
 
 #refracting {
     grid-area: refracting;
 }
+
+#project-2 {
+    background-image: url('../images/prework-study-guide.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    display: grid;
+    grid-template-columns: 75% 25%;
+    grid-template-rows: 1fr 0.4fr 40px;
+    grid-template-areas: ". ." "prework ." ". .";
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, .2);
+    transition: 0.2s;
+}
+
+#project-2:hover {
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0);
+    transition: 0.2s;
+}
+
+#prework {
+    grid-area: prework;
+}
+
+
+#project-3 {
+    background-image: url('../images/blanc-noir.jpg');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, .2);
+    height: 500px;
+    display: grid;
+    grid-template-columns: 75% 25%;
+    grid-template-rows: 1fr 0.4fr 40px;
+    grid-template-areas: ". ." "other ." ". .";
+    transition: 0.2s;
+}
+
+#project-3:hover {
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0);
+    transition: 0.2s;
+}
+
+#other {
+    grid-area: other;
+}
+
+#refracting,
+#prework,
+#other {
+    box-shadow: 10px 10px 30px #000;
+}
+
+/* Styling project info grid */
 
 .project-info {
     background-color: var(--dark);
@@ -209,59 +257,6 @@ nav a {
     font-size: 2.2rem;
     font-weight: 900;
     margin-bottom: 0;
-}
-
-#project-2 {
-    background-image: url('../images/prework-study-guide.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 500px;
-    display: grid;
-    grid-template-columns: 75% 25%;
-    grid-template-rows: 1fr 0.4fr 40px;
-    grid-template-areas: ". ." "prework ." ". .";
-    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.2);
-    transition: 0.2s;
-}
-
-#project-2:hover {
-    box-shadow: inset 0 0 0 1000px rgba(0,0,0,0);
-    transition: 0.2s;
-}
-
-#prework {
-    grid-area: prework;
-}
-
-
-#project-3 {
-    background-image: url('../images/blanc-noir.jpg');
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: cover;
-    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.2);
-    height: 500px;
-    display: grid;
-    grid-template-columns: 75% 25%;
-    grid-template-rows: 1fr 0.4fr 40px;
-    grid-template-areas: ". ." "other ." ". .";
-    transition: 0.2s;
-}
-
-#project-3:hover {
-    box-shadow: inset 0 0 0 1000px rgba(0,0,0,0);
-    transition: 0.2s;
-}
-
-#other {
-    grid-area: other;
-}
-
-#refracting,
-#prework,
-#other {
-    box-shadow: 10px 10px 30px #000;
 }
 
 /*Contact Section */
@@ -296,6 +291,8 @@ a[href="mailto:bethany@motifdesignstudio.com"] {
     font-weight: 900;
 }
 
+/* social icon styling */
+
 .fa {
     padding: 20px 11px 20px 15px;
     font-size: 30px;
@@ -304,25 +301,24 @@ a[href="mailto:bethany@motifdesignstudio.com"] {
     text-align: center;
     text-decoration: none;
     border-radius: 50%;
-  }
+}
 
-  .fa-facebook {
+.fa-facebook {
     margin-right: 20px;
     background: #3B5998;
     color: white;
-  }
+}
 
-  .fa-instagram {
-    /* background: linear-gradient(#c32aa3, #4c5fd7, #7232bd, #f46f30, #ffdc7d); */
-    background: linear-gradient(217deg, rgba(195, 42, 163,1), rgba(255,0,0,0) 70.71%),
-            linear-gradient(127deg, rgba(76, 95, 215,1), rgba(0,255,0,0) 70.71%),
-            linear-gradient(336deg, rgba(244, 111, 48,1), rgba(0,0,255,0) 70.71%);
+.fa-instagram {
+    background: linear-gradient(217deg, rgba(195, 42, 163, 1), rgba(255, 0, 0, 0) 70.71%),
+        linear-gradient(127deg, rgba(76, 95, 215, 1), rgba(0, 255, 0, 0) 70.71%),
+        linear-gradient(336deg, rgba(244, 111, 48, 1), rgba(0, 0, 255, 0) 70.71%);
     color: white;
-  }
+}
 
 /* Media Queries */
 
-/* About Section */
+    /* About Section */
 
 @media only screen and (max-width:900px) {
     #about-section {
@@ -346,7 +342,7 @@ a[href="mailto:bethany@motifdesignstudio.com"] {
         border-bottom: 1px solid var(--dark);
     }
 
-    #title {
+    #about-info h1 {
         justify-content: center;
     }
 
@@ -362,8 +358,14 @@ a[href="mailto:bethany@motifdesignstudio.com"] {
         gap: 30px;
     }
 
+    #project-1 {
+        grid-template-columns: 75% 25%;
+    }
+}
+
     /* Contact Section */
 
+@media only screen and (max-width: 1000px) {
     #contact {
         flex-direction: column;
         justify-content: center;
