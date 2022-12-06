@@ -81,6 +81,7 @@ nav a {
     column-gap: 40px;
 }
 
+/* adding background-image to container so that it is responsive */
 #image {
     grid-area: image;
     background-image: url("../images/bethany-ryalls-avatar.png");
@@ -221,6 +222,7 @@ nav a {
     grid-area: other;
 }
 
+/*adding box-shadow to create depth in design */
 #refracting,
 #prework,
 #other {
@@ -280,6 +282,7 @@ nav a {
     color: var(--dark);
 }
 
+/* adding line after email link to separate links */
 a[href="mailto:bethany@motifdesignstudio.com"] {
     margin-right: 20px;
     border-right: 1px solid black;
@@ -303,6 +306,7 @@ a[href="mailto:bethany@motifdesignstudio.com"] {
     border-radius: 50%;
 }
 
+/*adding backgrounds to imported icons */
 .fa-facebook {
     margin-right: 20px;
     background: #3B5998;
@@ -318,7 +322,7 @@ a[href="mailto:bethany@motifdesignstudio.com"] {
 
 /* Media Queries */
 
-    /* About Section */
+/* About Section - Redefining grid properties for smaller screens and devices */
 
 @media only screen and (max-width:900px) {
     #about-section {
@@ -346,7 +350,7 @@ a[href="mailto:bethany@motifdesignstudio.com"] {
         justify-content: center;
     }
 
-    /* Portfolio Section */
+    /* Portfolio Section - Redefining grid properties for smaller screens and devices  */
 
     #portfolio-grid {
         background-color: var(--dark);
@@ -363,7 +367,7 @@ a[href="mailto:bethany@motifdesignstudio.com"] {
     }
 }
 
-    /* Contact Section */
+/* Contact Section - Redefining flex properties for smaller screens and devices  */
 
 @media only screen and (max-width: 1000px) {
     #contact {
